@@ -3,7 +3,7 @@
 $id = ""; // id
 $fname = ""; // full name
 $lname = ""; // last name
-$mo_no = ""; // mobile number of user
+//$mo_no = ""; // mobile number of user
 $user_name = ""; // username of user
 $em = ""; // email
 $em2 = ""; // confirm email
@@ -32,9 +32,9 @@ if (isset($_POST['register_button'])) {
 
 
 	// Mobile ******************************************************************************************
-	$mo_no = strip_tags($_POST['reg_mobile']); // remove html tags
+	/*$mo_no = strip_tags($_POST['reg_mobile']); // remove html tags
 	$mo_no = str_replace(" ", "", $mo_no); // remove spaces
-	$_SESSION['reg_mobile'] = $mo_no; // storing mobile number value in session variable
+	$_SESSION['reg_mobile'] = $mo_no; // storing mobile number value in session variable*/
 	// ***************************************************************************************************
 
 
@@ -204,7 +204,7 @@ if (isset($_POST['register_button'])) {
 
 
 		// ================= sending data to database ----------------------------------
-		$query = mysqli_query($con, "INSERT INTO users VALUES ('0','$fname','$lname','$mo_no','$user_name','$em','$dob','$password','$profile_pic','0','0','no',',','$date')");
+		$query = mysqli_query($con, "INSERT INTO users VALUES ('0','$fname','$lname','$user_name','$em','no','$dob','$password','$profile_pic','0','0','no',',','$date')");
 		/*if ($query) {
 			echo "data send";
 		}
@@ -219,7 +219,7 @@ if (isset($_POST['register_button'])) {
 
 			$_SESSION['reg_fname'] = "";
 			$_SESSION['reg_lname'] = "";
-			$_SESSION['reg_mobile'] = "";
+			/*$_SESSION['reg_mobile'] = "";*/
 			$_SESSION['reg_username'] = "";
 			$_SESSION['reg_email'] = "";
 			$_SESSION['reg_email2'] = "";
@@ -231,55 +231,3 @@ if (isset($_POST['register_button'])) {
 
 
 
-<?php
-
-
-require('textlocal.class.php');
-$error_array = array();
-
-if(isset($_POST['sendopt'])) {
-    /*Enter your API_KEY*/
-    define("API_KEY", 'ezKctOMO/PQ-AW7jX514Yt21ERT5HbFGgmHzOLbopd');
-
-    $textlocal = new Textlocal(false, false, API_KEY);
-    // mobile number validation
-	// ======================
-	$check_mobile_query = mysqli_query($con, "SELECT mobile_num FROM users WHERE mobile_num='$mo_no'");
-	if (mysqli_num_rows($check_mobile_query)>0) {
-		array_push($error_array, "Mobile Number already exists!!<br>");
-	}
-	if (strlen($mo_no) > 10 || strlen($mo_no) < 10) {
-		array_push($error_array, "Invalid mobile number!!<br>");
-	}
-	if (preg_match("/[^0-9]/", $mo_no)) {
-		array_push($error_array, "Mobile numbers contain only 0-9 digits!!<br>");
-	}
-    // Access enter mobile number in input box
-    $numbers = array($_POST['reg_mobile']);
-
-    $sender = 'TXTLCL';
-    $otp = mt_rand(10000, 99999);
-
-    $message = "Hello, " . "<br>" . " OTP for your mobile number verification  is : " . $otp;
-
-    try {
-        $result = $textlocal->sendSms($numbers, $message, $sender);
-        setcookie('otp', $otp);
-        array_push($error_array, "OTP successfully sent to your mobile number!!<br>");
-    } 
-    catch (Exception $e) {
-        die('Error: ' . $e->getMessage());
-    }
-}
-
-if(isset($_POST['verifyotp'])) { 
-    $otp = $_POST['otp'];
-    if($_COOKIE['otp'] == $otp) {
-        array_push($error_array, "Mobile Number verified successfully!!<br>");
-
-        array_push($error_array, "<span style='color: #14C800'>You'll all set! Go ahead and Login!</span>");
-    } else {
-        array_push($error_array, "Please enter correct otp!!<br>");
-    }
-}
-?>
