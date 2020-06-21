@@ -1,19 +1,8 @@
-body{
-	
-}
-
-/*register.php file css*/
-
-/* header css*/
-/*background-color: #094162;*/
-
 a {
 	text-decoration: none;
 	color: #094162;
 	font-size: 16px;
 	text-align: center;
-	float: left;
-	margin-top: 5px;
 	font-weight: 700;
 }
 a:hover{
@@ -24,44 +13,33 @@ a:hover{
 	background-color: #094162;
 	color: #FFF;
 	text-align: center;
-	height: 38px;
-
+	height: 16px;
 	margin: 0px;
+
 }
 
-#form .first input[type="text"]{
-	float: right;
-	margin-bottom: 15px;
-	border-radius: 5px;
-	padding: 10px;
-	font-size: 16px;
-	margin-left: 0px;
-	border: 1px solid #1d2a5b;
-}
 
 #first{
-	margin-top: 15px;
-	margin-bottom: 5px;
 	border-radius: 5px;
-	padding: 10px;
 	font-size: 16px;
-	margin-left: 0px;
-	border: 1px solid #1d2a5b;
+	border: 1px solid #808080;
 }
 
 #second{
 	display: none;
-	margin-top: 15px;
-	margin-bottom: 5px;
 	border-radius: 5px;
-	padding: 10px;
-	font-size: 10px;
-	margin-left: 0px;
-	border: 1px solid #1d2a5b;
+	font-size: 16px;
+	border: 1px solid #808080;
 }
 
-#third{
-	display: none;
+input[type="text"],input[type="email"],input[type="password"], input[type="date"]{
+	border: 1px solid #e5e5e5;
+	height: 40px;
+	font-size: 15px;
+
 }
 
+input[type="text"]:hover,input[type="email"]:hover,input[type="password"], input[type="date"]:hover{
+	border-color: #3498db;
+}
 
