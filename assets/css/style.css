@@ -1,3 +1,12 @@
+@font-face{
+	font-family: 'Bellota-LightItalic';
+	src:url("../fonts/Bellota-LightItalic.otf");
+}
+body {
+	background: #175690;
+	font-family: 'Bellota-BoldItalic';
+}
+
 a {
 	text-decoration: none;
 	color: #094162;
@@ -5,41 +14,188 @@ a {
 	text-align: center;
 	font-weight: 700;
 }
+
 a:hover{
 	text-decoration: none;
 	color: #294182;
 }
+
 .footer{
 	background-color: #094162;
 	color: #FFF;
 	text-align: center;
-	height: 16px;
-	margin: 0px;
+	line-height: 48px;
+	height: 48px;
+	margin: 0px;	
 
 }
 
-
-#first{
-	border-radius: 5px;
-	font-size: 16px;
-	border: 1px solid #808080;
+.content{
+	width: 65%;
+	height: 100%;
 }
-
-#second{
-	display: none;
-	border-radius: 5px;
-	font-size: 16px;
-	border: 1px solid #808080;
+.logo {
+	background-color: #094162;
+	height: 74px;
 }
-
-input[type="text"],input[type="email"],input[type="password"], input[type="date"]{
-	border: 1px solid #e5e5e5;
-	height: 40px;
+.logo span{
+	font-size: 35px;
+	font-family: 'Bellota-LightItalic';
+	font-weight: bold;
+	color: #FFF;
+}
+.title{
+	position: relative;
+	float: left;
+	font-family: 'Bellota-LightItalic';
 	font-size: 15px;
+}
+.rights{
+	position: relative;
+	text-align: center;
+	font-size: 12px;
+	font-family: 'Bellota-LightItalic';
+}
+
+
+
+
+/* tab form css*/
+*{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.forms {
+	background: #FFF;
+	box-shadow: 0 0 3px #000;
+	margin: 0px auto;
+	overflow: hidden;
+	position: relative;
+	padding: 0;
+	text-align: center;
+}
+.header{
+	width: 65%;
+}
+.forms{
+	width: 35%;
+	float: right;
+}
+
+.forms form { 
+	padding: 10px; 
 
 }
 
-input[type="text"]:hover,input[type="email"]:hover,input[type="password"], input[type="date"]:hover{
-	border-color: #3498db;
+#login_form { 
+	display: none; 
+	height: 484px;
+	margin-top: 30px;
+}
+#login_form input{
+	margin-top: 20px;
+
+}
+.forms .tab-group {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.forms .tab-group:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+.forms .tab-group li a {	
+	text-decoration: none;
+	padding: 2.5px;
+	background: #e5e6e7;
+	color: #888;
+	font-size: 20px;
+	float: left;
+	width: 50%;
+	text-align: center;
+	border-top: 3px solid transparent;
+	-moz-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	-webkit-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+}
+.forms .tab-group li a:hover {
+	background: #dedfdf;
+	color: #333;
+}
+.forms .tab-group .active a {
+	background: #094162;
+	color: #FFF;
+	border-top: 3px solid #73cf41;
 }
 
+.forms input {
+	font-size: 13px;
+	display: block;
+	width: 100%;
+	border: 1px solid #ddd;
+	color: #666;
+	border-radius: 0;
+	-moz-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	-webkit-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+}
+.forms input:focus {
+	outline: 0;
+	border-color: #2e5ed7;
+}
+
+.forms .button {
+	border: 0;
+	outline: none;
+	border-radius: 0;
+	padding: 10px 0;
+	font-size: 18px;
+	font-weight: 300;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	background: #73cf41;
+	color: #FFF;
+	cursor: pointer;
+	-moz-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	-webkit-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+}
+.forms .button:hover, .button:focus { 
+	background: #56ae26; 
+}
+.text-p { 
+	text-align: right; 
+}
+.text-p a {
+ color: #1383ea;
+}
+
+
+/*socia media icons*/
+.icons{
+	position: relative;
+	float: right;
+	font-size: 13px;
+	font-family: 'Bellota-LightItalic';
+}
+
+ /* Style all font awesome icons */
+.fa {
+	text-align: center;
+	color: #808080;
+	font-size: 16px;
+	text-decoration: none;
+	margin-left: 5px;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  color: #FFF;
+}
