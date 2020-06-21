@@ -24,19 +24,40 @@ a:hover{
 	background-color: #094162;
 	color: #FFF;
 	text-align: center;
+	height: 38px;
+
 	margin: 0px;
 }
 
-#form{
+#form .first input[type="text"]{
 	float: right;
+	margin-bottom: 15px;
+	border-radius: 5px;
+	padding: 10px;
+	font-size: 16px;
+	margin-left: 0px;
+	border: 1px solid #1d2a5b;
 }
 
 #first{
-	margin-top: 50px;
+	margin-top: 15px;
+	margin-bottom: 5px;
+	border-radius: 5px;
+	padding: 10px;
+	font-size: 16px;
+	margin-left: 0px;
+	border: 1px solid #1d2a5b;
 }
 
 #second{
 	display: none;
+	margin-top: 15px;
+	margin-bottom: 5px;
+	border-radius: 5px;
+	padding: 10px;
+	font-size: 10px;
+	margin-left: 0px;
+	border: 1px solid #1d2a5b;
 }
 
 #third{
