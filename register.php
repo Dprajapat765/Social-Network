@@ -8,7 +8,7 @@ require 'includes/form_handlers/register_handler.php';
 <html>
 <head>
 	<title>SignUp or Login - Bhilwara Network</title>
-	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+	<!-- <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css"> -->
 	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
 	<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -50,7 +50,7 @@ require 'includes/form_handlers/register_handler.php';
 		});
 	</script>
 </head>
-<body>
+<body background="assets/images/background/desktop.jpg">
 	<?php 
 	if (isset($_POST['reg_button'])) {
 		echo '
@@ -72,13 +72,11 @@ require 'includes/form_handlers/register_handler.php';
 
 
 <div class="container-fluid">
+	<h3 style="background-color: #094162; color: #FFF; height: 74px; margin-right: 5px; margin: 0px;">Bhilwara Network<img src="assets\\images\\logo\\logo.png" alt="logo"></h3>
 	<div class="row">
 		<div class="header col-sm-8">
-			<h1>D Rural Network</h1>
-			<?php include "standard.html"; ?>
+			<?php include "includes/standard.html"; ?>
 		</div>
-			
-
 		<div id="form" class="col-sm-4">
 			<div id="first">
 				<div class="form-group">
@@ -198,53 +196,7 @@ require 'includes/form_handlers/register_handler.php';
 			</div><!-- end of second form -->
 			
 			
-			<div id="third">
-				<form id="verify_form" role="form" method="post" enctype="multipart/form-data">
-			        <div class="form-group">
-			            <label for="mobile">Mobile Number</label>
-			            <input type="text" class="form-control" id="mobile" name="mobile" value="" maxlength="10" placeholder="Enter valid mobile number" required=""><br>
-			            <!--  Display errors -->
-			            <?php if(in_array("Invalid mobile number!!<br>", $error_array)) 
-			                    echo "Invalid mobile number!!<br>";
-			                else if(in_array("Mobile numbers contain only 0-9 digits!!<br>", $error_array)) 
-			                    echo "Mobile numbers contain only 0-9 digits!!<br>";
-			                else if(in_array("OTP successfully sent to your mobile number!!<br>", $error_array)) 
-			                    echo "OTP successfully sent to your mobile number!!<br>";
-			                else if(in_array("Mobile Number verified successfully!!<br>", $error_array)) 
-			                    echo "Mobile Number verified successfully!!<br>";               
-			                else if(in_array("Please enter correct otp!!<br>", $error_array)) 
-			                    echo "Please enter correct otp!!<br>";
-			            ?>  
-			    
-			            <button type="submit" name="sendopt" class="btn btn-lg btn-success btn-block">Send OTP</button>
-			            <!-- Display errors -->
-			            <?php if (in_array("Mobile Number verified successfully!!<br>", $error_array)) {
-			                    echo "Mobile Number verified successfully!!<br>";}
-			                    else if (in_array("Please enter correct otp!!<br>", $error_array)) {
-			                        echo "Please enter correct otp!!<br>";
-			                    }?>
-			        </div>
-			    </form>
 
-				<form id="verify_otp" method="POST" action="">
-				    <div class="col-sm-4 form-group">
-				        <label for="otp">OTP</label>
-				        <input type="text" class="form-control" id="otp" name="otp" placeholder="Enter OTP" maxlength="5" required=""><br>
-				        <?php if (in_array("OTP successfully sent to your mobile number!!<br>", $error_array)) {
-				            echo "OTP successfully sent to your mobile number!!<br>";
-				        }?>	
-				    </div>
-			    	<div class="col-sm-4">
-				        <button type="submit" name="verifyotp" class="btn btn-lg btn-success btn-block">Verify</button><br>
-						<?php if (in_array("<span style='color: #14C800'>You'll all set! Go ahead and Login!</span>", $error_array)) {
-								echo "<span style='color: #14C800'>You'll all set! Go ahead and Login!</span>";
-							}
-							?>
-			    		<button id="back" class="btn btn-lg btn-info btn-block">Back</button>
-			    		<a href='#' id='log_in2'>Already have an account!! Login here!</a><br>
-			    	</div>
-				</form>
-			</div><!-- end of third form -->
 		</div><!-- end of form -->
 	</div><!-- end of wor -->
 </div><!-- end of container fluid -->
