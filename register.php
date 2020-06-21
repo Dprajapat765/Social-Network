@@ -1,6 +1,7 @@
 <?php 
 require 'config/config.php';
 require 'includes/form_handlers/register_handler.php';
+require 'includes/form_handlers/login_handler.php';
 ?>
 
 
@@ -8,20 +9,19 @@ require 'includes/form_handlers/register_handler.php';
 <html>
 <head>
 	<title>SignUp or Login - Bhilwara Network</title>
-	<!-- <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css"> -->
-	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
-	<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+<!-- CSS only -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="assets/js/jssor.slider-28.0.0.min.js" type="text/javascript"></script>
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	<script type="text/javascript">
 		$(document).ready(function(){
-			// onclick sign up, hide login form  and show registration form
-			$("#signup").click(function() {
-				$("#second").slideUp("slow", function(){
-					$("#third").slideDown("slow");
-				});
-			});
+			
 			// onclick create an account, hide login form  and show registration form
 			$("#register").click(function() {
 				$("#first").slideUp("slow", function(){
@@ -29,19 +29,6 @@ require 'includes/form_handlers/register_handler.php';
 				});
 			});
 
-			// show registration form and hide otp process
-			$("#back").click(function() {
-				$("#third").slideUp("slow", function(){
-					$("#second").slideDown("slow");
-				});
-			});
-
-			// click on login link, hide all form annd show login form
-			$("#log_in2").click(function() {
-				$("#third").slideUp("slow", function(){
-					$("#first").slideDown("slow");
-				});
-			});
 			$("#log_in").click(function() {				
 				$("#second").slideUp("slow", function(){
 					$("#first").slideDown("slow");
@@ -50,7 +37,7 @@ require 'includes/form_handlers/register_handler.php';
 		});
 	</script>
 </head>
-<body background="assets/images/background/desktop.jpg">
+<body>
 	<?php 
 	if (isset($_POST['reg_button'])) {
 		echo '
@@ -71,11 +58,23 @@ require 'includes/form_handlers/register_handler.php';
 
 
 
-<div class="container-fluid">
 	<h3 style="background-color: #094162; color: #FFF; height: 74px; margin-right: 5px; margin: 0px;">Bhilwara Network<img src="assets\\images\\logo\\logo.png" alt="logo"></h3>
+<div class="container-fluid">
 	<div class="row">
 		<div class="header col-sm-8">
-			<?php include "includes/standard.html"; ?>
+			<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+			  <div class="carousel-inner">
+			    <div class="carousel-item active">
+			      <img class="d-block w-100" src="assets/images/slider_images/011.jpg" alt="First slide">
+			    </div>
+			    <div class="carousel-item">
+			      <img class="d-block w-100" src="assets/images/slider_images/012.jpg" alt="Second slide">
+			    </div>
+			    <div class="carousel-item">
+			      <img class="d-block w-100" src="assets/images/slider_images/013.jpg" alt="Third slide">
+			    </div>
+			  </div>
+			</div>
 		</div>
 		<div id="form" class="col-sm-4">
 			<div id="first">
@@ -200,27 +199,8 @@ require 'includes/form_handlers/register_handler.php';
 		</div><!-- end of form -->
 	</div><!-- end of wor -->
 </div><!-- end of container fluid -->
-<script type="text/javascript">
 
-</script>
-	<!-- header of page -->
-	<!-- <div class="container-fluid">
-		<div>
-			
-			<div class="reg_form">
-				<form>
-					<input type="text" name="log_username" placeholder="Username"><br><br>
-					<input type="password" name="password" placeholder="Password"><br><br>
-					<input type="button" name="" value="Login">
-				</form>
-				<h2>Login or Signup</h2>
-				
-			</div>
-		</div>
- -->		<!-- <div id="slider">
-			<?php /*include 'standard.html';*/ ?>
-		</div> -->
-	<!-- `</div> -->
+
 	<p class="footer">D Rural Network</p>
 </body>
 </html>
