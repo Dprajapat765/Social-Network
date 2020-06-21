@@ -84,6 +84,11 @@ require 'includes/form_handlers/login_handler.php';
 						<input class="form-control" type="password" name="log_password" placeholder="Password" required=""><br>
 						<input class="form-control btn btn-lg btn-primary btn-block" type="submit" name="login_button" value="Login">
 						<br>
+						<?php  
+						if (in_array("first name must be between 2-25 characters!!<br>", $error_array)) {
+							echo "Username or Password is incorrect.<br>";
+						}
+						?>
 						<a href="#" id="register">Create an account!!</a>
 					</form>
 				</div>
