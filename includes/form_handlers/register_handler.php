@@ -1,5 +1,6 @@
 <?php
 // Declaring variables to prevents from the errors
+
 $id = ""; // id
 $fname = ""; // full name
 $lname = ""; // last name
@@ -83,15 +84,15 @@ if (isset($_POST['register_button'])) {
 			// check the number of rows returned by the query
 			$num_rows = mysqli_num_rows($e_check);
 			if ($num_rows>0) {
-				array_push($error_array, "Email already in use!!<br>");
+				array_push($error_array, "<span style='color:#FF0000;'>Email already in use!!</span><br>");
 			}
 		}
 		else{
-			array_push($error_array, "Invalid format!!<br>");
+			array_push($error_array, "<span style='color:#FF0000;'>Invalid format!!</span><br>");
 		}
 	}
 	else{
-		array_push($error_array, "Email doesn't match!<br>");
+		array_push($error_array, "<span style='color:#FF0000;'>Email doesn't match!</span><br>");
 	}
 	// ***********************************
 
@@ -99,7 +100,7 @@ if (isset($_POST['register_button'])) {
 	// first name validation
 	// ======================
 	if (strlen($fname) > 25 || strlen($fname) < 2) {
-		array_push($error_array, "first name must be between 2-25 characters!!<br>");
+		array_push($error_array, "<span style='color:#FF0000;'>first name must be between 2-25 characters!!</span><br>");
 	}
 	// ***********************************
 
@@ -107,7 +108,7 @@ if (isset($_POST['register_button'])) {
 	// last name validation
 	// ======================
 	if (strlen($lname) > 25 || strlen($lname) < 2) {
-		array_push($error_array, "last name must be between 2-25 characters!!<br>");
+		array_push($error_array, "<span style='color:#FF0000;'>last name must be between 2-25 characters!!</span><br>");
 	}
 	// ***********************************
 
@@ -115,14 +116,14 @@ if (isset($_POST['register_button'])) {
 	// password validation
 	// ========================
 	if ($password != $password2) {
-		array_push($error_array, "password doesn't match!!<br>");
+		array_push($error_array, "<span style='color:#FF0000;'>password doesn't match!!</span><br>");
 	}
 	else{
 		if (preg_match("/[^A-Za-z0-9]/", $password)) {
-			array_push($error_array, "password can only contain a-z or numbers!!<br>");
+			array_push($error_array, "<span style='color:#FF0000;'>password can only contain a-z or numbers!!</span><br>");
 		}
 		if (strlen($password) > 20 || strlen($password )< 6)  {
-			array_push($error_array, "password should atleast 6 character long or between 6-20!!<br>");
+			array_push($error_array, "<span style='color:#FF0000;'>password should atleast 6 character long or between 6-20!!</span><br>");
 		} 
 	}
 	// ***********************************
@@ -134,14 +135,14 @@ if (isset($_POST['register_button'])) {
 	// ========================
 	$check_username_query = mysqli_query($con, "SELECT username FROM users WHERE username='$user_name'");
 	if (mysqli_num_rows($check_username_query)>0) {
-		array_push($error_array, "Username already exists!!");
+		array_push($error_array, "<span style='color:#FF0000;'>Username already exists!!</span><br>");
 	}
 	if (strlen($user_name)<6) {
-		array_push($error_array, "Username should be atleast of 6 characters!!<br>");
+		array_push($error_array, "<span style='color:#FF0000;'>Username should be atleast of 6 characters!!</span><br>");
 	}
 	else{
 		if (preg_match("/[^A-Za-z0-9]/", $user_name)) {
-			array_push($error_array, "username can only contain a-z or numbers!!<br>");
+			array_push($error_array, "<span style='color:#FF0000;'>username can only contain a-z or numbers!!</span><br>");
 		}
 	}
 
@@ -227,7 +228,7 @@ if (isset($_POST['register_button'])) {
 
 	} // end of if ------------------------------------ encryption and profile pic assignment
 } // end of if (isset if)
+
+
 ?>
-
-
 
