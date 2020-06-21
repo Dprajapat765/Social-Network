@@ -22,7 +22,7 @@ if (isset($_POST['login_button'])) {
 		exit();
 	}
 	else{
-		array_push($error_array, "Username or Password is incorrect.<br>");
+		array_push($error_array, "<span style='color:#FF0000;'>Username or Password is incorrect.</span><br>");
 	}
 }
 
