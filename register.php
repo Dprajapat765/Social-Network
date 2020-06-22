@@ -155,13 +155,13 @@ require 'includes/form_handlers/login_handler.php';
 		<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
 			<div class="carousel-inner">
 				<div class="carousel-item active">
-					<img class="d-block w-100" src="assets/images/slider_images/011.jpg" alt="First slide">
+					<img style="height: 535px;" class="d-block w-100" src="assets/images/slider_images/011.jpg" alt="First slide">
 				</div>
 				<div class="carousel-item">
-					<img class="d-block w-100" src="assets/images/slider_images/012.jpg" alt="Second slide">
+					<img style="height: 535px;" class="d-block w-100" src="assets/images/slider_images/012.jpg" alt="Second slide">
 				</div>
 				<div class="carousel-item">
-					<img class="d-block w-100" src="assets/images/slider_images/013.jpg" alt="Third slide">
+					<img style="height: 535px;" class="d-block w-100" src="assets/images/slider_images/013.jpg" alt="Third slide">
 				</div>
 			</div>
 		</div>
