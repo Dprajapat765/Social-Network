@@ -1,3 +1,27 @@
+@media only screen and (max-width: 600px) {    
+    .content #carouselExampleSlidesOnly{
+    	display: none;
+    }
+    .footer .rights,.title{
+    	display: none;
+    }
+    .footer .icons{
+    	float: left;
+    	margin-left: 80px;
+    }
+    .logo img{
+    	height: 60px;
+    	width: 60px;
+    }
+    .logo{
+    	text-align:center;
+    }
+}
+@media only screen and (max-width: 600px) {
+	.forms .tab-group li a{
+	    	font-size: 20px;
+	    }
+   }
 @font-face{
 	font-family: 'Bellota-LightItalic';
 	src:url("../fonts/Bellota-LightItalic.otf");
@@ -5,6 +29,8 @@
 body {
 	background: #175690;
 	font-family: 'Bellota-BoldItalic';
+	padding: 0px;
+	margin: 0px;
 }
 
 a {
@@ -20,44 +46,20 @@ a:hover{
 	color: #294182;
 }
 
-.footer{
-	background-color: #094162;
-	color: #FFF;
-	text-align: center;
-	line-height: 48px;
-	height: 48px;
-	margin: 0px;	
 
-}
-
-.content{
-	width: 65%;
-	height: 100%;
-}
 .logo {
 	background-color: #094162;
 	height: 74px;
+
 }
 .logo span{
-	font-size: 35px;
-	font-family: 'Bellota-LightItalic';
+	font-size: 28px;
+	font-family: 'Fontdiner Swanky', cursive;
 	font-weight: bold;
 	color: #FFF;
-}
-.title{
 	position: relative;
-	float: left;
-	font-family: 'Bellota-LightItalic';
-	font-size: 15px;
+	top: 7px;
 }
-.rights{
-	position: relative;
-	text-align: center;
-	font-size: 12px;
-	font-family: 'Bellota-LightItalic';
-}
-
-
 
 
 /* tab form css*/
@@ -75,17 +77,12 @@ a:hover{
 	position: relative;
 	padding: 0;
 	text-align: center;
-	height: 609px;
+	
 }
-.header{
-	width: 65%;
-}
+
 .forms{
-	width: 35%;
+	padding-top: .5px;
 	float: right;
-
-
-
 }
 
 .forms form { 
@@ -95,7 +92,7 @@ a:hover{
 
 #login_form { 
 	display: none; 
-	height: 484px;
+	height: 454px;
 	margin-top: 30px;
 }
 #login_form input{
@@ -114,10 +111,9 @@ a:hover{
 }
 .forms .tab-group li a {	
 	text-decoration: none;
-	padding: 2.5px;
 	background: #e5e6e7;
 	color: #888;
-	font-size: 44px;
+	font-size: 24px;
 	float: left;
 	width: 50%;
 	text-align: center;
@@ -132,13 +128,12 @@ a:hover{
 	color: #333;
 }
 .forms .tab-group .active a {
-	background: #094162;
-	color: #FFF;
-	border-top: 3px solid #73cf41;
+	color:  #175690;
+
 }
 
 .forms input {
-	font-size: 15px;
+	font-size: 10px;
 	display: block;
 	width: 100%;
 	border: 1px solid #ddd;
@@ -179,6 +174,38 @@ a:hover{
 }
 .text-p a {
  color: #1383ea;
+}
+/*======================content =========================*/
+.content{
+	margin: 0px;
+	padding: 0px;		
+}
+
+
+
+
+/*================================ footer ==========================*/
+.footer{
+	background-color: #094162;
+	color: #FFF;
+	text-align: center;
+	line-height: 48px;
+	height: 48px;
+	margin: 0px;	
+
+}
+
+.title{
+	position: relative;
+	float: left;
+	font-family: 'Bellota-LightItalic';
+	font-size: 15px;
+}
+.rights{
+	position: relative;
+	text-align: center;
+	font-size: 12px;
+	font-family: 'Bellota-LightItalic';
 }
 
 
