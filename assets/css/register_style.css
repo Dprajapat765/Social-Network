@@ -1,97 +1,243 @@
+/*============================================================================================================================
+===============================================================================================================================
+===============================================================================================================================
+===============================================================================================================================
+================================================= register.php ==================================================================
+===============================================================================================================================
+===============================================================================================================================
+===============================================================================================================================
+===============================================================================================================================*/
+
+@media only screen and (max-width: 600px) {    
+    .content #carouselExampleSlidesOnly{
+    	display: none;
+    }
+    .footer .rights,.title{
+    	display: none;
+    }
+    .footer .icons{
+    	float: left;
+    	margin-left: 80px;
+    }
+    .logo img{
+    	height: 60px;
+    	width: 60px;
+    }
+    .logo{
+    	text-align:center;
+    }
+}
+
 @font-face{
 	font-family: 'Bellota-LightItalic';
 	src:url("../fonts/Bellota-LightItalic.otf");
 }
-@font-face{
+
+/*===================================================================*/
+
+body {
+	background-color: #e5e6e7;
 	font-family: 'Bellota-BoldItalic';
-	src:url("../fonts/Bellota-BoldItalic.otf");
-}
-
-html, body{
-	height: 100%;
-	min-height: 100%;
-}
-
-form{
-	text-align: center;
-}
-body{
-	background-image: url("../images/background/desktop.jpg");
-	margin: 0;
-	padding: 0;
-	background-size: 100%;
-	width: 100%;
-	height: 100%;
-	min-width: 950px;
+	padding: 0px;
+	margin: 0px;
 }
 
 a {
 	text-decoration: none;
-	color: #3498db;
+	color: #094162;
+	font-size: 16px;
+	text-align: center;
+	font-weight: 700;
 }
-.login_box{
-	font-family: "Bellota-LightItalic",sans-serif;
-	margin-right: auto;
-	margin-left: auto;
-	position: relative;
-	top: 45px;
-	width: 35%;
-	background-color: #FFF;
-	border: 1px solid #EDEDED;
-	border-radius: 10px;
-	padding: 5px;
-	opacity: .98;
+
+a:hover{
+	text-decoration: none;
+	color: #294182;
+}
+
+
+.logo {
+	background-color: #094162;
+	height: 74px;
 
 }
-.login_header {
-	font-family: 'Bellota-LightItalic',sans-serif;
+.logo span{
+	font-size: 28px;
+	font-family: 'Fontdiner Swanky', cursive;
+	font-weight: bold;
+	color: #FFF;
+	position: relative;
+	top: 7px;
+}
+
+
+/* tab form css*/
+*{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.forms {
+	background: #FFF;
+	box-shadow: 0 0 3px #000;
+	margin: 0px auto;
+	overflow: hidden;
+	position: relative;
+	padding: 0;
+	text-align: center;
+	
+}
+
+.forms{
+	padding-top: .5px;
+	float: right;
+}
+
+.forms form { 
+	padding: 10px; 
+
+}
+
+#login_form { 
+	display: none; 
+	height: 454px;
+	margin-top: 30px;
+}
+#login_form input{
+	margin-top: 20px;
+
+}
+.forms .tab-group {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.forms .tab-group:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+.forms .tab-group li a {	
+	text-decoration: none;
+	background: #e5e6e7;
+	color: #888;
+	font-size: 24px;
+	float: left;
+	width: 50%;
+	text-align: center;
+	border-top: 3px solid transparent;
+	-moz-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	-webkit-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+}
+.forms .tab-group li a:hover {
+	background: #dedfdf;
+	color: #333;
+}
+.forms .tab-group .active a {
+	color:  #175690;
+
+}
+
+.forms input {
+	font-size: 10px;
+	display: block;
 	width: 100%;
-	height: 90px;
-	background-color: #3498db;
+	border: 1px solid #ddd;
+	color: #666;
+	border-radius: 0;
+	-moz-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	-webkit-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+}
+.forms input:focus {
+	outline: 0;
+	border-color: #2e5ed7;
+}
+
+.forms .button {
+	border: 0;
+	outline: none;
+	border-radius: 0;
+	padding: 10px 0;
+	font-size: 18px;
+	font-weight: 300;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	background: #73cf41;
+	color: #FFF;
+	cursor: pointer;
+	-moz-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	-webkit-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+}
+.forms .button:hover, .button:focus { 
+	background: #56ae26; 
+}
+.text-p { 
+	text-align: right; 
+}
+.text-p a {
+ color: #1383ea;
+}
+
+
+/*======================content =========================*/
+.content{
+	margin: 0px;
+	padding: 0px;		
+}
+
+
+
+
+/*================================ footer ==========================*/
+.footer{
+	background-color: #094162;
 	color: #FFF;
 	text-align: center;
-	border-top-left-radius: 7px;
-	border-top-right-radius: 7px;
-}
-.login_header h1{
-	font-family: 'Bellota-BoldItalic',sans-serif;
-	margin-top: 0;
-	margin-bottom: 0;
-	color: #2C6C96;
-	text-shadow: #73B6E2 0.5px 0.5px 0px;
-	font-size: 250%;
-}
-
-input[type='submit']{
-
-	background-color: #3498db;
-	border: 1px solid #3498db;
-	border-radius: 3px;
-	margin:5px 0 10px 0;
-	padding: 5px 10px 5px 10px;
-	color: #2C6C96;
-	text-shadow: #73B6E2 0.5px 0.5px 0px;
-	font-family: 'Bellota-BoldItalic',sans-serif;
-	font-size: 100%;
+	line-height: 48px;
+	height: 48px;
+	margin: 0px;	
 
 }
 
-
-
-input[type="text"],input[type="email"],input[type="password"]{
-	border: 1px solid #e5e5e5;
-	margin-top: 5px;
-	width: 70%;
-	height: 35px;
-	margin-bottom: 10px;
-	padding-left: 5px;
+.title{
+	position: relative;
+	float: left;
+	font-family: 'Bellota-LightItalic';
+	font-size: 15px;
+}
+.rights{
+	position: relative;
+	text-align: center;
+	font-size: 12px;
+	font-family: 'Bellota-LightItalic';
 }
 
-input[type="text"]:hover,input[type="email"]:hover,input[type="password"]:hover{
-	border-color: #3498db;
+
+/*socia media icons*/
+.icons{
+	position: relative;
+	float: right;
+	font-size: 13px;
+	font-family: 'Bellota-LightItalic';
 }
 
-#second{
-	display: none;
+ /* Style all font awesome icons */
+.fa {
+	text-align: center;
+	color: #808080;
+	font-size: 16px;
+	text-decoration: none;
+	margin-left: 5px;
 }
 
+/* Add a hover effect if you want */
+.fa:hover {
+  color: #FFF;
+}
