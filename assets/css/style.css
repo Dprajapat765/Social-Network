@@ -1,232 +1,59 @@
-@media only screen and (max-width: 600px) {    
-    .content #carouselExampleSlidesOnly{
-    	display: none;
-    }
-    .footer .rights,.title{
-    	display: none;
-    }
-    .footer .icons{
-    	float: left;
-    	margin-left: 80px;
-    }
-    .logo img{
-    	height: 60px;
-    	width: 60px;
-    }
-    .logo{
-    	text-align:center;
-    }
-}
-@media only screen and (max-width: 600px) {
-	.forms .tab-group li a{
-	    	font-size: 20px;
-	    }
-   }
-@font-face{
-	font-family: 'Bellota-LightItalic';
-	src:url("../fonts/Bellota-LightItalic.otf");
-}
-body {
-	background: #175690;
-	font-family: 'Bellota-BoldItalic';
-	padding: 0px;
-	margin: 0px;
-}
+/*============================================================================================================================
+===============================================================================================================================
+===============================================================================================================================
+===============================================================================================================================
+================================================= header.php ==================================================================
+===============================================================================================================================
+===============================================================================================================================
+===============================================================================================================================
+===============================================================================================================================*/
 
-a {
-	text-decoration: none;
-	color: #094162;
-	font-size: 16px;
-	text-align: center;
-	font-weight: 700;
-}
-
-a:hover{
-	text-decoration: none;
-	color: #294182;
-}
-
-
-.logo {
-	background-color: #094162;
-	height: 74px;
-
-}
-.logo span{
-	font-size: 28px;
-	font-family: 'Fontdiner Swanky', cursive;
-	font-weight: bold;
-	color: #FFF;
-	position: relative;
-	top: 7px;
-}
-
-
-/* tab form css*/
-*{
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-}
-
-.forms {
-	background: #FFF;
-	box-shadow: 0 0 3px #000;
-	margin: 0px auto;
-	overflow: hidden;
-	position: relative;
-	padding: 0;
-	text-align: center;
-	
-}
-
-.forms{
-	padding-top: .5px;
-	float: right;
-}
-
-.forms form { 
-	padding: 10px; 
-
-}
-
-#login_form { 
-	display: none; 
-	height: 454px;
-	margin-top: 30px;
-}
-#login_form input{
-	margin-top: 20px;
-
-}
-.forms .tab-group {
-	list-style: none;
-	padding: 0;
-	margin: 0;
-}
-.forms .tab-group:after {
-	content: "";
-	display: table;
-	clear: both;
-}
-.forms .tab-group li a {	
-	text-decoration: none;
-	background: #e5e6e7;
-	color: #888;
-	font-size: 24px;
-	float: left;
-	width: 50%;
-	text-align: center;
-	border-top: 3px solid transparent;
-	-moz-transition: all 0.4s ease-in-out;
-	-o-transition: all 0.4s ease-in-out;
-	-webkit-transition: all 0.4s ease-in-out;
-	transition: all 0.4s ease-in-out;
-}
-.forms .tab-group li a:hover {
-	background: #dedfdf;
-	color: #333;
-}
-.forms .tab-group .active a {
-	color:  #175690;
-
-}
-
-.forms input {
-	font-size: 10px;
-	display: block;
+.top_bar{
 	width: 100%;
-	border: 1px solid #ddd;
-	color: #666;
-	border-radius: 0;
-	-moz-transition: all 0.4s ease-in-out;
-	-o-transition: all 0.4s ease-in-out;
-	-webkit-transition: all 0.4s ease-in-out;
-	transition: all 0.4s ease-in-out;
+	height: 50px;
+	background-color:  #094162;
+	border-bottom: 0.25em solid #1894CA;
+	margin: 0 0 10px 0;
+	display: inline-flex;
 }
-.forms input:focus {
-	outline: 0;
-	border-color: #2e5ed7;
+.home_logo a img{
+	border-radius: 50%;
+	width: 45px;
+	height: 45px;
 }
 
-.forms .button {
-	border: 0;
-	outline: none;
-	border-radius: 0;
-	padding: 10px 0;
-	font-size: 18px;
-	font-weight: 300;
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	background: #73cf41;
+.home_logo a span{
+	
+	font-family: 'Fontdiner Swanky', cursive;;
+	margin-left: 10px;
+	font-size: 30px;
+	position: relative;
+	top: 3px; 
 	color: #FFF;
-	cursor: pointer;
-	-moz-transition: all 0.4s ease-in-out;
-	-o-transition: all 0.4s ease-in-out;
-	-webkit-transition: all 0.4s ease-in-out;
-	transition: all 0.4s ease-in-out;
 }
-.forms .button:hover, .button:focus { 
-	background: #56ae26; 
-}
-.text-p { 
-	text-align: right; 
-}
-.text-p a {
- color: #1383ea;
-}
-/*======================content =========================*/
-.content{
-	margin: 0px;
-	padding: 0px;		
-}
-
-
-
-
-/*================================ footer ==========================*/
-.footer{
-	background-color: #094162;
-	color: #FFF;
-	text-align: center;
-	line-height: 48px;
-	height: 48px;
-	margin: 0px;	
-
-}
-
-.title{
-	position: relative;
-	float: left;
-	font-family: 'Bellota-LightItalic';
-	font-size: 15px;
-}
-.rights{
-	position: relative;
-	text-align: center;
-	font-size: 12px;
-	font-family: 'Bellota-LightItalic';
-}
-
-
-/*socia media icons*/
-.icons{
-	position: relative;
-	float: right;
-	font-size: 13px;
-	font-family: 'Bellota-LightItalic';
-}
-
- /* Style all font awesome icons */
-.fa {
-	text-align: center;
-	color: #808080;
-	font-size: 16px;
+.home_logo a:hover{
 	text-decoration: none;
-	margin-left: 5px;
+	color: #e5e6e7;
 }
 
-/* Add a hover effect if you want */
-.fa:hover {
-  color: #FFF;
+nav{
+	float: right;
+	right: 5px;
+	position: absolute;
+	margin: 10px;
+}
+
+nav a{
+	position: relative;
+	color: #FFF;
+	text-decoration: none;
+	font-size: 22px;
+	margin-left: 15px;
+	padding:10px;
+}
+
+
+nav a:hover{
+	text-decoration: none;
+	color: #808080;
 }
