@@ -55,7 +55,7 @@ require 'includes/form_handlers/login_handler.php';
 			
 			<form action="register.php" method="POST" id="login_form">
 			    <div class="input-field">
-					<input class="form-control" type="text" name="log_email" placeholder="Username" required=""><br>
+					<input class="form-control" type="text" name="log_email" placeholder="E-mail or Phone" required=""><br>
 					<input class="form-control" type="password" name="log_password" placeholder="Password" required=""><br>
 					<input class="form-control btn btn-lg btn-success btn-block" type="submit" name="login_button" value="Login">
 					<br>
