@@ -42,11 +42,27 @@ else{
 		</div>
 
 		<nav>
-			<a href="#" style="font-size: 17px;"><?php echo $user['first_name']; ?></a>
-			<a href="index.php" title="Home"><i class="fa fa-home fa-lg"></i></a>
-			<a href="#" title="Notifications"><i class="fa fa-bell-o fa-lg"></i></a>
-			<a href="#" title="Messages"><i class="fa fa-envelope fa-lg"></i></a>
-			<a href="#" title="My Account"><i class="fa fa-users fa-lg"></i></a>
-			<a href="#" title="Settings"><i class="fa fa-cog fa-lg"></i></a>
+			<a href="<?php echo $userLoggedIn; ?>" style="font-size: 17px;">
+				<?php echo $user['first_name']; ?>
+			</a>
+			<a href="index.php" title="Home">
+				<i class="fa fa-home fa-lg"></i>
+			</a>
+			<a href="#" title="Notifications">
+				<i class="fa fa-bell-o fa-lg"></i>
+			</a>
+			<a href="#" title="Messages">
+				<i class="fa fa-envelope fa-lg"></i>
+			</a>
+			<a href="#" title="My Account">
+				<i class="fa fa-users fa-lg"></i>
+			</a>
+			<a href="#" title="Settings">
+				<i class="fa fa-cog fa-lg"></i>
+			</a>
 		</nav>
 	</div>
+
+	<!-- wrapper class of main page  clossing this on index.php-->
+	<div class="container">
+		<div class="wrapper">
