@@ -7,6 +7,35 @@
 ===============================================================================================================================
 ===============================================================================================================================
 ===============================================================================================================================*/
+@media only screen and (max-width: 600px) {    
+    .top_bar .home_logo a span{
+    	display: none;
+    }
+    nav .icn{
+    	display: none;
+    }
+    #user_details_desktop{
+    	display: none;
+    }
+    #main_page_content{
+    	width: 100%;
+    }
+    #user_pic_name img{
+    	border-radius: 50%;
+    	width: 80px;
+    	height: 80px;
+    }
+    #user_pic_name a:hover{
+    	text-decoration: none;
+    }
+    #user_pic_name a{
+    	text-decoration: none;
+    }
+    #user_pic_name{
+    	margin-bottom: 10px;
+    }
+}
+
 body{
 	background-color: #E6EAE8;
 }
